@@ -1,0 +1,126 @@
+<!-- frontend/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madad - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkTycbHSnjT1kJumBnP3V+t+DLmX8kXII1F72rXYoGrS1J0JpBf13e4gH5d1zxG2A8jz/jhM2dpMDHhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo3.png" alt="Madad Logo">
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" id="logout-btn" style="display: none;">Logout</a></li>
+      </ul>
+      <div class="auth-buttons" id="auth-buttons">
+        <button id="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <button id="signup-btn"><i class="fas fa-user-plus"></i> Signup</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to Madad</h1>
+    <p>Your trusted peer-to-peer lending platform</p>
+  </header>
+
+  <!-- Loan Listings -->
+  <section class="loan-listings">
+    <h2>Available Loans</h2>
+    <div id="loan-list" class="loan-container">
+      <!-- Loans will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Offer Loan Form (Visible to Lenders) -->
+  <section class="offer-loan" id="offer-loan-section" style="display: none;">
+    <h2>Offer a Loan</h2>
+    <form id="offer-loan-form">
+      <div class="form-group">
+        <label for="amount">Loan Amount:</label>
+        <input type="number" id="amount" name="amount" required />
+      </div>
+      <div class="form-group">
+        <label for="duration">Duration (Months):</label>
+        <input type="number" id="duration" name="duration" required />
+      </div>
+      <div class="form-group">
+        <label for="interestRate">Interest Rate (%):</label>
+        <input type="number" id="interestRate" name="interestRate" step="0.1" required />
+      </div>
+      <button type="submit">Offer Loan</button>
+    </form>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-login">&times;</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="password" required />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-signup">&times;</span>
+      <h2>Signup</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Name:</label>
+          <input type="text" id="signup-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-role">Role:</label>
+          <select id="signup-role" name="role" required>
+            <option value="">Select Role</option>
+            <option value="Lender">Lender</option>
+            <option value="Borrower">Borrower</option>
+          </select>
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Madad. All rights reserved.</p>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+

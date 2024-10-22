@@ -1,0 +1,20 @@
+<!-- frontend/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madad - Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <script>
+    // Redirect to index.html and open login modal
+    window.onload = () => {
+      window.location.href = 'index.html#login';
+      const loginModal = document.getElementById('login-modal');
+      loginModal.style.display = 'block';
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- frontend/profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madad - Profile</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkTycbHSnjT1kJumBnP3V+t+DLmX8kXII1F72rXYoGrS1J0JpBf13e4gH5d1zxG2A8jz/jhM2dpMDHhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo3.png" alt="Madad Logo">
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="profile-section">
+    <h2>Your Profile</h2>
+    <div id="profile-details" class="profile-details">
+      <!-- User details will be dynamically inserted here -->
+    </div>
+    <div id="loan-history" class="loan-history">
+      <!-- Loan history will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Madad. All rights reserved.</p>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
